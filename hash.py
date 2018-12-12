@@ -1,6 +1,8 @@
 word = ""
-key = 12
+pord = ""
+key = 0
 letters = []
+petters = []
 crypt = []
 meny = 0
 
@@ -17,14 +19,14 @@ while meny != 3:
         print("Du måste göra ett korekt val")
 
     if meny == 1:
+        key = (int(input("Välj en nyckel: ")))
         word = input("Skriv in de ord du vill kryptera: ")
         for letter in word:
             letters.append(ord(letter) + key)
         print(letters)
     elif meny == 2:
-        word = input("Skriv in de ord du vill dekryptera: ")
         for l in letters:
             crypt.append(chr(l -key))
-        print(crypt)
+        print(crypt)            
     else:
         print("")
